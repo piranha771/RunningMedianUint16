@@ -129,7 +129,7 @@ uint16_t RunningMedian::getAverage()
   {
     sum += _values[i];
   }
-  return sum / _count;
+  return ((sum * 1000) / _count) / 1000;
 }
 
 uint16_t RunningMedian::getAverage(uint8_t nMedians)
@@ -150,7 +150,7 @@ uint16_t RunningMedian::getAverage(uint8_t nMedians)
   {
     sum += _values[_sortIdx[i]];
   }
-  return sum / nMedians;
+  return ((sum * 1000) / nMedians) / 1000;
 }
 
 uint16_t RunningMedian::getElement(const uint8_t n)
