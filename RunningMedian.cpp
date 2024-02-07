@@ -124,7 +124,7 @@ uint16_t RunningMedian::getAverage()
   if (_count == 0)
     return 0;
 
-  uint16_t sum = 0;
+  uint32_t sum = 0;
   for (uint8_t i = 0; i < _count; i++)
   {
     sum += _values[i];
@@ -145,7 +145,7 @@ uint16_t RunningMedian::getAverage(uint8_t nMedians)
   if (_sorted == false)
     sort();
 
-  uint16_t sum = 0;
+  uint32_t sum = 0;
   for (uint8_t i = start; i < stop; i++)
   {
     sum += _values[_sortIdx[i]];
